@@ -1,0 +1,25 @@
+from tkinter import *
+from tkinter.ttk import Combobox
+from PIL import ImageTk
+
+class cricketscore :
+    #constructor
+    def __init__(self,basewindow):
+        self.basewindow = basewindow
+        self.basewindow.title('live cricket score')
+        self.basewindow.geometry('800x500')
+        self.bg = ImageTk.PhotoImage(file="crico.png")
+        bg = Label(self.basewindow, images=self.bg).place(x=0,y=0)
+
+        self.label=Label(self.basewindow, text='Live Matches', font=("times new roman",60), compound='center').pack(padx=100,pady=50)
+
+
+def main():
+    basewindow = Tk()
+
+    obj = cricketscore(basewindow)
+    basewindow.mainloop()
+
+
+if __name__ == "__main__":
+    main()
